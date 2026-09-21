@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16-bookworm
 
 EXPOSE 3001 3005
 
@@ -7,7 +7,7 @@ WORKDIR /shapez.io
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg default-jre \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* 
+    && rm -rf /var/lib/apt/lists/*
 
 COPY package.json yarn.lock ./
 RUN yarn
