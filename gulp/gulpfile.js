@@ -133,8 +133,9 @@ gulp.task("main.webserver", () => {
                 enable: true,
             },
             directoryListing: false,
-            open: true,
-            port: 3005,
+            host: "0.0.0.0",
+            open: false,
+            port: 5000,
         })
     );
 });
@@ -147,7 +148,9 @@ gulp.task("main.webserver", () => {
 function serveHTML({ version = "web-dev" }) {
     browserSync.init({
         server: [buildFolder, path.join(baseDir, "mod_examples")],
-        port: 3005,
+        host: "0.0.0.0",
+        port: 5000,
+        open: false,
         ghostMode: {
             clicks: false,
             scroll: false,
