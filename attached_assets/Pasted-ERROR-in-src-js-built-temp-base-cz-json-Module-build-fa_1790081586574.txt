@@ -1,0 +1,950 @@
+ERROR in ./src/js/built-temp/base-cz.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-cz.json'
+ @ ./src/js/languages.js 49:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-da.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-da.json'
+ @ ./src/js/languages.js 57:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-de.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-de.json'
+ @ ./src/js/languages.js 65:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-en.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-en.json'
+ @ ./src/js/translations.js 8:25-61
+ @ ./src/js/game/meta_building_registry.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-es.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-es.json'
+ @ ./src/js/languages.js 73:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-fi.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-fi.json'
+ @ ./src/js/languages.js 161:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-fr.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-fr.json'
+ @ ./src/js/languages.js 81:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-he.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-he.json'
+ @ ./src/js/languages.js 193:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-hu.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-hu.json'
+ @ ./src/js/languages.js 97:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-it.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-it.json'
+ @ ./src/js/languages.js 89:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ja.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ja.json'
+ @ ./src/js/languages.js 33:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-kor.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-kor.json'
+ @ ./src/js/languages.js 41:14-51
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-nl.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-nl.json'
+ @ ./src/js/languages.js 105:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-no.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-no.json'
+ @ ./src/js/languages.js 113:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pl.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pl.json'
+ @ ./src/js/languages.js 121:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pt-BR.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pt-BR.json'
+ @ ./src/js/languages.js 137:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pt-PT.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pt-PT.json'
+ @ ./src/js/languages.js 129:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ro.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ro.json'
+ @ ./src/js/languages.js 145:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ru.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ru.json'
+ @ ./src/js/languages.js 153:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-sv.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-sv.json'
+ @ ./src/js/languages.js 169:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-tr.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-tr.json'
+ @ ./src/js/languages.js 177:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-uk.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-uk.json'
+ @ ./src/js/languages.js 185:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-zh-CN.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-zh-CN.json'
+ @ ./src/js/languages.js 17:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-zh-TW.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-zh-TW.json'
+ @ ./src/js/languages.js 25:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/sfx.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/sfx.json'
+ @ ./src/js/platform/browser/sound.js 11:16-52
+ @ ./src/js/application.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+Child worker:
+                                 Asset     Size  Chunks                   Chunk Names
+    2911d41ff90ac434c291.worker.js.map  153 KiB    main  [emitted] [dev]  main
+     + 1 hidden asset
+    Entrypoint main = 2911d41ff90ac434c291.worker.js 2911d41ff90ac434c291.worker.js.map
+Child worker:
+                                 Asset     Size  Chunks                   Chunk Names
+    63d379d3791f95dbcb01.worker.js.map  4.1 KiB    main  [emitted] [dev]  main
+     + 1 hidden asset
+    Entrypoint main = 63d379d3791f95dbcb01.worker.js 63d379d3791f95dbcb01.worker.js.map
+[12:51:19] webpack is watching for changes
+[BS] Reloading Browsers... (buffered 4 events)
+[12:51:20] Version: webpack 4.43.0
+Built at: 09/22/2026 12:51:20 PM
+        Asset     Size     Chunks                   Chunk Names
+    bundle.js  3.7 MiB  bundle.js  [emitted]        bundle.js
+bundle.js.map  3.6 MiB  bundle.js  [emitted] [dev]  bundle.js
+ + 2 hidden assets
+Entrypoint bundle.js = bundle.js bundle.js.map
+
+ERROR in ./src/js/built-temp/base-cz.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-cz.json'
+ @ ./src/js/languages.js 49:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-da.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-da.json'
+ @ ./src/js/languages.js 57:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-de.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-de.json'
+ @ ./src/js/languages.js 65:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-en.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-en.json'
+ @ ./src/js/translations.js 8:25-61
+ @ ./src/js/game/meta_building_registry.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-es.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-es.json'
+ @ ./src/js/languages.js 73:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-fi.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-fi.json'
+ @ ./src/js/languages.js 161:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-fr.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-fr.json'
+ @ ./src/js/languages.js 81:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-he.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-he.json'
+ @ ./src/js/languages.js 193:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-hu.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-hu.json'
+ @ ./src/js/languages.js 97:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-it.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-it.json'
+ @ ./src/js/languages.js 89:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ja.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ja.json'
+ @ ./src/js/languages.js 33:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-kor.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-kor.json'
+ @ ./src/js/languages.js 41:14-51
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-nl.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-nl.json'
+ @ ./src/js/languages.js 105:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-no.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-no.json'
+ @ ./src/js/languages.js 113:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pl.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pl.json'
+ @ ./src/js/languages.js 121:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pt-BR.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pt-BR.json'
+ @ ./src/js/languages.js 137:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pt-PT.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pt-PT.json'
+ @ ./src/js/languages.js 129:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ro.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ro.json'
+ @ ./src/js/languages.js 145:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ru.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ru.json'
+ @ ./src/js/languages.js 153:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-sv.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-sv.json'
+ @ ./src/js/languages.js 169:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-tr.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-tr.json'
+ @ ./src/js/languages.js 177:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-uk.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-uk.json'
+ @ ./src/js/languages.js 185:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-zh-CN.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-zh-CN.json'
+ @ ./src/js/languages.js 17:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-zh-TW.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-zh-TW.json'
+ @ ./src/js/languages.js 25:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/sfx.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/sfx.json'
+ @ ./src/js/platform/browser/sound.js 11:16-52
+ @ ./src/js/application.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+Child worker:
+     2 assets
+    Entrypoint main = 2911d41ff90ac434c291.worker.js 2911d41ff90ac434c291.worker.js.map
+Child worker:
+     2 assets
+    Entrypoint main = 63d379d3791f95dbcb01.worker.js 63d379d3791f95dbcb01.worker.js.map
+[12:51:20] webpack is watching for changes
+[12:51:21] Version: webpack 4.43.0
+Built at: 09/22/2026 12:51:21 PM
+        Asset      Size     Chunks                   Chunk Names
+    bundle.js  3.72 MiB  bundle.js  [emitted]        bundle.js
+bundle.js.map  3.63 MiB  bundle.js  [emitted] [dev]  bundle.js
+ + 2 hidden assets
+Entrypoint bundle.js = bundle.js bundle.js.map
+
+ERROR in ./src/js/built-temp/base-cz.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-cz.json'
+ @ ./src/js/languages.js 49:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-da.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-da.json'
+ @ ./src/js/languages.js 57:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-de.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-de.json'
+ @ ./src/js/languages.js 65:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-en.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-en.json'
+ @ ./src/js/translations.js 8:25-61
+ @ ./src/js/game/meta_building_registry.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-es.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-es.json'
+ @ ./src/js/languages.js 73:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-fi.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-fi.json'
+ @ ./src/js/languages.js 161:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-fr.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-fr.json'
+ @ ./src/js/languages.js 81:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-he.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-he.json'
+ @ ./src/js/languages.js 193:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-hu.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-hu.json'
+ @ ./src/js/languages.js 97:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-it.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-it.json'
+ @ ./src/js/languages.js 89:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ja.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ja.json'
+ @ ./src/js/languages.js 33:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-kor.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-kor.json'
+ @ ./src/js/languages.js 41:14-51
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-nl.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-nl.json'
+ @ ./src/js/languages.js 105:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-no.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-no.json'
+ @ ./src/js/languages.js 113:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pl.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pl.json'
+ @ ./src/js/languages.js 121:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pt-BR.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pt-BR.json'
+ @ ./src/js/languages.js 137:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pt-PT.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pt-PT.json'
+ @ ./src/js/languages.js 129:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ro.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ro.json'
+ @ ./src/js/languages.js 145:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ru.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ru.json'
+ @ ./src/js/languages.js 153:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-sv.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-sv.json'
+ @ ./src/js/languages.js 169:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-tr.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-tr.json'
+ @ ./src/js/languages.js 177:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-uk.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-uk.json'
+ @ ./src/js/languages.js 185:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-zh-CN.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-zh-CN.json'
+ @ ./src/js/languages.js 17:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-zh-TW.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-zh-TW.json'
+ @ ./src/js/languages.js 25:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/sfx.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/sfx.json'
+ @ ./src/js/platform/browser/sound.js 11:16-52
+ @ ./src/js/application.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+Child worker:
+     2 assets
+    Entrypoint main = 2911d41ff90ac434c291.worker.js 2911d41ff90ac434c291.worker.js.map
+Child worker:
+     2 assets
+    Entrypoint main = 63d379d3791f95dbcb01.worker.js 63d379d3791f95dbcb01.worker.js.map
+[12:51:21] webpack is watching for changes
+[BS] Reloading Browsers...
+[12:51:21] Starting 'imgres.atlasToJson'...
+Processing: /home/runner/workspace/res_built/atlas/atlas0_lq.atlas
+Processing: /home/runner/workspace/res_built/atlas/atlas0_mq.atlas
+[12:51:21] Finished 'imgres.atlasToJson' after 4.48 ms
+[BS] Reloading Browsers... (buffered 3 events)
+[12:51:22] Starting 'imgres.atlas'...
+[12:51:22] Starting 'imgres.atlasToJson'...
+Processing: /home/runner/workspace/res_built/atlas/atlas0_hq.atlas
+Processing: /home/runner/workspace/res_built/atlas/atlas0_lq.atlas
+Processing: /home/runner/workspace/res_built/atlas/atlas0_mq.atlas
+[12:51:22] Finished 'imgres.atlasToJson' after 5.76 ms
+[12:51:25] Version: webpack 4.43.0
+Built at: 09/22/2026 12:51:24 PM
+        Asset      Size     Chunks                   Chunk Names
+    bundle.js  3.75 MiB  bundle.js  [emitted]        bundle.js
+bundle.js.map  3.66 MiB  bundle.js  [emitted] [dev]  bundle.js
+ + 2 hidden assets
+Entrypoint bundle.js = bundle.js bundle.js.map
+
+ERROR in ./src/js/built-temp/base-cz.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-cz.json'
+ @ ./src/js/languages.js 49:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-da.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-da.json'
+ @ ./src/js/languages.js 57:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-de.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-de.json'
+ @ ./src/js/languages.js 65:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-en.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-en.json'
+ @ ./src/js/translations.js 8:25-61
+ @ ./src/js/game/meta_building_registry.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-es.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-es.json'
+ @ ./src/js/languages.js 73:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-fi.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-fi.json'
+ @ ./src/js/languages.js 161:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-fr.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-fr.json'
+ @ ./src/js/languages.js 81:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-he.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-he.json'
+ @ ./src/js/languages.js 193:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-hu.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-hu.json'
+ @ ./src/js/languages.js 97:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-it.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-it.json'
+ @ ./src/js/languages.js 89:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ja.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ja.json'
+ @ ./src/js/languages.js 33:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-kor.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-kor.json'
+ @ ./src/js/languages.js 41:14-51
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-nl.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-nl.json'
+ @ ./src/js/languages.js 105:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-no.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-no.json'
+ @ ./src/js/languages.js 113:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pl.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pl.json'
+ @ ./src/js/languages.js 121:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pt-BR.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pt-BR.json'
+ @ ./src/js/languages.js 137:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-pt-PT.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-pt-PT.json'
+ @ ./src/js/languages.js 129:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ro.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ro.json'
+ @ ./src/js/languages.js 145:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-ru.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-ru.json'
+ @ ./src/js/languages.js 153:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-sv.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-sv.json'
+ @ ./src/js/languages.js 169:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-tr.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-tr.json'
+ @ ./src/js/languages.js 177:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-uk.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-uk.json'
+ @ ./src/js/languages.js 185:14-50
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-zh-CN.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-zh-CN.json'
+ @ ./src/js/languages.js 17:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/base-zh-TW.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/base-zh-TW.json'
+ @ ./src/js/languages.js 25:14-53
+ @ ./src/js/mods/mod_interface.js
+ @ ./src/js/mods/modloader.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
+
+ERROR in ./src/js/built-temp/sfx.json
+Module build failed (from ./gulp/loader.compressjson.js):
+Error: ENOENT: no such file or directory, open '/home/runner/workspace/src/js/built-temp/sfx.json'
+ @ ./src/js/platform/browser/sound.js 11:16-52
+ @ ./src/js/application.js
+ @ ./src/js/main.js
+ @ multi ./src/js/main.js
