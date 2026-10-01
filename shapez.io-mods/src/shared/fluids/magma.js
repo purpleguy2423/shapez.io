@@ -1,7 +1,11 @@
 import { Pipes } from "@dj1tjoo/shapez-pipes";
 import { Loader } from "shapez/core/loader";
 
-export const StoneMagma = Pipes.registerFluid(
+const sharedFluidCache =
+    window.__shapezSharedFluidCache || (window.__shapezSharedFluidCache = {});
+
+export const StoneMagma =
+    sharedFluidCache.stoneMagma || (sharedFluidCache.stoneMagma = Pipes.registerFluid(
     () =>
         class StoneMagmaFluid extends Pipes.BaseFluid {
             static getId() {
@@ -43,9 +47,10 @@ export const StoneMagma = Pipes.registerFluid(
                 return "#e5541e";
             }
         }
-);
+));
 
-export const BasaltMagma = Pipes.registerFluid(
+export const BasaltMagma =
+    sharedFluidCache.basaltMagma || (sharedFluidCache.basaltMagma = Pipes.registerFluid(
     () =>
         class BasaltMagmaFluid extends Pipes.BaseFluid {
             static getId() {
@@ -87,4 +92,4 @@ export const BasaltMagma = Pipes.registerFluid(
                 return "#5D3C4E";
             }
         }
-);
+));

@@ -2,7 +2,10 @@ import { Pipes } from "@dj1tjoo/shapez-pipes";
 import { globalConfig } from "shapez/core/config";
 import { Loader } from "shapez/core/loader";
 
-export const Steam = Pipes.registerFluid(
+const sharedFluidCache =
+    window.__shapezSharedFluidCache || (window.__shapezSharedFluidCache = {});
+
+export const Steam = sharedFluidCache.steam || (sharedFluidCache.steam = Pipes.registerFluid(
     () =>
         class SteamFluid extends Pipes.BaseFluid {
             static getId() {
@@ -44,4 +47,4 @@ export const Steam = Pipes.registerFluid(
                 return "#CDD3DA";
             }
         }
-);
+));

@@ -50,6 +50,10 @@ async function createAtlas({ folder, id }, plugin) {
     const source = path.join("../", "src", folder, "res");
     const dest = path.join("../", "build", `${id}_atlases`);
 
+    if (!existsSync(source)) {
+        return;
+    }
+
     const filesHash = await computeMetaHash(source);
     if (filesHash.files < 1 || (plugin.cache[id] && plugin.cache[id].equals(filesHash.hash))) {
         return;

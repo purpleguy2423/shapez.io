@@ -2,7 +2,10 @@ import { Pipes } from "@dj1tjoo/shapez-pipes";
 import { globalConfig } from "shapez/core/config";
 import { Loader } from "shapez/core/loader";
 
-export const Water = Pipes.registerFluid(
+const sharedFluidCache =
+    window.__shapezSharedFluidCache || (window.__shapezSharedFluidCache = {});
+
+export const Water = sharedFluidCache.water || (sharedFluidCache.water = Pipes.registerFluid(
     () =>
         class WaterFluid extends Pipes.BaseFluid {
             static getId() {
@@ -44,4 +47,4 @@ export const Water = Pipes.registerFluid(
                 return "#2389DA";
             }
         }
-);
+));

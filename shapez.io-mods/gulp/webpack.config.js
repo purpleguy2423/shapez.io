@@ -43,7 +43,22 @@ module.exports = async ({ watch = false }) => {
         }
     }
 
+    const loadOrder = [
+        "dj1tjoo_advanced_energy",
+        "dj1tjoo_pipes",
+        "dj1tjoo_toolbar_switcher",
+        "dj1tjoo_advanced_generators",
+        "dj1tjoo_energized",
+        "dj1tjoo_materials",
+    ];
+    const loadPriority = new Map(loadOrder.map((id, index) => [id, index]));
     mods.sort((a, b) => {
+        const priorityDifference =
+            (loadPriority.get(a.id) ?? Number.MAX_SAFE_INTEGER) -
+            (loadPriority.get(b.id) ?? Number.MAX_SAFE_INTEGER);
+        if (priorityDifference !== 0) {
+            return priorityDifference;
+        }
         if (a.id < b.id) {
             return -1;
         }
@@ -76,17 +91,26 @@ module.exports = async ({ watch = false }) => {
         externalMods.push(file);
     }
 
+    const modBaseUrl = (process.env.SHAPEZ_MOD_BASE_URL || "http://localhost:3010").replace(/\/+$/, "") + "/";
     const shapezMods = [
-        ...externalMods.map(x => `http://localhost:3010/${x}`),
-        ...mods.map(x => `http://localhost:3010/${x.id}@${x.version}.js`),
+        ...externalMods.map(x => `${modBaseUrl}${x}`),
+        ...mods.map(x => `${modBaseUrl}${x.id}@${x.version}.js`),
     ];
 
     // Store in shapez config
-    const configPath = path.join(__dirname, "..", "shapez", "src", "js", "core", "config.local.js");
-    let config = fs.readFileSync(configPath, "utf-8");
+    const shapezRoot = path.resolve(__dirname, "..", "..");
+    const configPath = path.join(shapezRoot, "src", "js", "core", "config.local.js");
+    const configTemplatePath = path.join(shapezRoot, "src", "js", "core", "config.local.template.js");
+    let config = fs.existsSync(configPath)
+        ? fs.readFileSync(configPath, "utf-8")
+        : fs.readFileSync(configTemplatePath, "utf-8");
+    const externalModUrlExpression = /(\/\/|\n)?[\s]*externalModUrl:[^]*?,[\s]*?\/\//ms;
+    if (!externalModUrlExpression.test(config)) {
+        throw new Error("Could not find externalModUrl in the shapez local config template");
+    }
     config = config.replace(
-        /(\/\/|\n)?[\s]*externalModUrl:[^]*?,[\s]*?\/\//gms,
-        `\nexternalModUrl: [${shapezMods.map(x => `"${x}"`).join(", ")}],\n//`
+        externalModUrlExpression,
+        `\nexternalModUrl: ${JSON.stringify(shapezMods)},\n//`
     );
     fs.writeFileSync(configPath, config);
 

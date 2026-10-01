@@ -1,1 +1,2 @@
 - [Legacy build runtime](legacy-build-runtime.md) — Archived Webpack 4 builds need OpenSSL compatibility and an explicit Replit preview port.
+- [Shared state across mod bundles](shapez-mod-bundle-shared-state.md) — Independent mod bundles re-evaluate shared registration modules; cache shared fluid wrappers globally.
