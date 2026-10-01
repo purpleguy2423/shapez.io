@@ -1,0 +1,43 @@
+advanced_generators:
+    oneAePerTick: 1 AE/t
+    aePerTick: <x> AE/t
+    ae: "<x> AE"
+    volumeAe: "Volume: <x>/<y> AE"
+    throughputAe: "Throughput: <x>/<y> AE/t"
+
+    oneLPerTick: 1 L/t
+    lPerTick: <x> L/t
+    l: "<x> L"
+    volumeL: "Volume: <x>/<y> L"
+    throughputL: "Throughput: <x>/<y> L/t"
+
+    produces: Produces
+    consumes: Consumes
+    throughput: Throughput
+    stores: Stores
+
+    fluid: "Fluid: <x>"
+    noFluid: "None"
+
+    turbine:
+        maxController: "The max number of controllers <x> has been exceeded or there are none"
+        maxArea: "The max area of <x> has been exceeded"
+        maxSteamIntake: "The max number of steam intakes <x> has been exceeded or there are none"
+        maxFuelIntake: "The max number of fuel intakes <x> has been exceeded or there are none"
+        maxEnergyOutlet: "The max number of energy outlets <x> has been exceeded or there are none"
+
+fluids:
+    water_fluid: Water
+    steam_fluid: Steam
+    stone_magma_fluid: Stone Magma
+
+storyRewards:
+    reward_advanced_energy_tunnels:
+        title: Energy and Pipe Tunnel
+        desc: The <strong>energy tunnel</strong> and <strong>pipe tunnel</strong> have been unlocked - You can now tunnel energy and fluids below belts and buildings with it!
+    reward_advanced_energy_fluids:
+        title: Pumps and Fluids
+        desc: The <strong>pump</strong> and <strong>magma generator</strong> have been unlocked - You can now pump water and generate energy by using magma!
+    reward_advanced_energy_steam_turbine:
+        title: Steam and Turbine
+        desc: "The <strong>steam generator</strong> and <strong>turbine</strong> have been unlocked - You can now generate steam from water and energy! <br /> Steam can be used to create energy in the turbine. The turbine needs to be assembled with different parts. Balance out these parts to generate the optimal energy generator. The turbine also needs fuel. There are 4 tiers of fuel: <br /> - CuRuCuRu has a 1:2 energy ratio <br /> - CgRyCgRy:CyRbCyRb has a 1:3 energy ratio <br /> - SyCcSyCc:ScCyScCy:CwRcCwRc has a 1:4 energy ratio <br /> - CgSyCgSy:SpCySpCy:--RcCwRc:Cy------ has a 1:5 energy ratio"

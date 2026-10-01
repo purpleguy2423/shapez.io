@@ -1,0 +1,18 @@
+{
+    "entry": "main.js",
+    "id": "dj1tjoo_multiplayer",
+    "version": "0.2.5",
+    "name": "Multiplayer",
+    "author": "DJ1TJOO",
+    "description": "The multiplayer mod",
+    "website": "https://github.com/dj1tjoo",
+    "settings": {
+        "showOtherPlayers": true,
+        "user": {
+            "name": "",
+            "lastServer": ""
+        },
+        "prefix": "/"
+    },
+    "_todo": ["fix buttons"]
+}
