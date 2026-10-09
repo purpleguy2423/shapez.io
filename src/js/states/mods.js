@@ -28,7 +28,7 @@ export class ModsState extends TextualGameState {
 
                 <div class="actions">
                    ${
-                       this.modsSupported && MODS.mods.length > 0
+                       this.modsSupported && MODS.getModEntries().length > 0
                            ? `<button class="styledButton browseMods">${T.mods.browseMods}</button>`
                            : ""
                    }
@@ -64,7 +64,7 @@ export class ModsState extends TextualGameState {
             `;
         }
 
-        if (MODS.mods.length === 0) {
+        if (MODS.getModEntries().length === 0) {
             return `
 
             <div class="modsStats noMods">
@@ -78,17 +78,26 @@ export class ModsState extends TextualGameState {
 
         let modsHtml = ``;
 
-        MODS.mods.forEach(mod => {
+        MODS.getModEntries().forEach(modEntry => {
             modsHtml += `
                 <div class="mod">
                     <div class="mainInfo">
-                        <span class="name">${mod.metadata.name}</span>
-                        <span class="description">${mod.metadata.description}</span>
-                        <a class="website" href="${mod.metadata.website}" target="_blank">${T.mods.modWebsite}</a>
+                        <span class="name">${modEntry.meta.name}</span>
+                        <span class="description">${modEntry.meta.description}</span>
+                        <a
+                            class="website"
+                            href="${modEntry.meta.website}"
+                            target="_blank"
+                        >
+                            ${T.mods.modWebsite}
+                        </a>
                     </div>
-                    <span class="version"><strong>${T.mods.version}</strong>${mod.metadata.version}</span>
-                    <span class="author"><strong>${T.mods.author}</strong>${mod.metadata.author}</span>
-                    <div class="value checkbox checked">
+                    <span class="version"><strong>${T.mods.version}</strong>${modEntry.meta.version}</span>
+                    <span class="author"><strong>${T.mods.author}</strong>${modEntry.meta.author}</span>
+                    <div
+                        class="value checkbox ${modEntry.enabled ? "checked" : ""}"
+                        data-mod-id="${modEntry.meta.id}"
+                    >
                         <span class="knob"></span>
                     </div>
 
@@ -123,12 +132,38 @@ export class ModsState extends TextualGameState {
 
         const checkboxes = this.htmlElement.querySelectorAll(".checkbox");
         Array.from(checkboxes).forEach(checkbox => {
-            this.trackClicks(checkbox, this.showModTogglingComingSoon);
+            const modId = checkbox.dataset.modId;
+            if (!modId) {
+                return;
+            }
+            this.trackClicks(checkbox, () => this.toggleMod(modId));
         });
     }
 
-    showModTogglingComingSoon() {
-        this.dialogs.showWarning(T.mods.togglingComingSoon.title, T.mods.togglingComingSoon.description);
+    async toggleMod(modId) {
+        const checkbox = this.htmlElement.querySelector(`.checkbox[data-mod-id="${modId}"]`);
+        if (!checkbox) {
+            return;
+        }
+
+        const shouldEnable = !checkbox.classList.contains("checked");
+        checkbox.classList.toggle("checked", shouldEnable);
+
+        try {
+            await MODS.toggleModEnabled(modId, shouldEnable);
+            const { restart } = this.dialogs.showInfo(
+                T.dialogs.restartRequired.title,
+                T.dialogs.restartRequired.text,
+                this.app.platformWrapper.getSupportsRestart() ? ["later:grey", "restart:misc"] : ["ok:good"]
+            );
+            if (restart) {
+                restart.add(() => this.app.platformWrapper.performRestart());
+            }
+        } catch (ex) {
+            console.error(ex);
+            checkbox.classList.toggle("checked", !shouldEnable);
+            this.dialogs.showWarning(T.global.error, ex && ex.message ? ex.message : String(ex));
+        }
     }
 
     openModsFolder() {

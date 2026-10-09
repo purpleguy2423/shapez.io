@@ -1,4 +1,5 @@
 import { generateMatrixRotations } from "shapez/core/utils";
+import { Loader } from "shapez/core/loader";
 import { defaultBuildingVariant } from "shapez/game/meta_building";
 import { ModMetaBuilding } from "shapez/mods/mod_meta_building";
 import { enumDirection, Vector } from "shapez/core/vector";
@@ -31,6 +32,18 @@ export class MetaBasicConsumerBuilding extends ModMetaBuilding {
 
     getSilhouetteColor() {
         return "#CFCBC9";
+    }
+
+    getSprite() {
+        return Loader.getSprite("sprites/buildings/basic_consumer.png");
+    }
+
+    getPreviewSprite(rotationVariant, variant) {
+        return Loader.getSprite("sprites/buildings/basic_consumer.png");
+    }
+
+    getBlueprintSprite(rotationVariant, variant) {
+        return Loader.getSprite("sprites/buildings/basic_consumer.png");
     }
 
     static getAllVariantCombinations() {

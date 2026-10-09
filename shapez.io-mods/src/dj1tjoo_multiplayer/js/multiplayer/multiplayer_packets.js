@@ -42,6 +42,9 @@ import { PausedGameSpeed } from "shapez/game/time/paused_game_speed";
 import { RegularGameSpeed } from "shapez/game/time/regular_game_speed";
 import { BasicSerializableObject, types } from "shapez/savegame/serialization";
 
+const MAX_IN_FLIGHT_PACKETS = 8;
+const MAX_PACKET_RETRIES = 5;
+
 /**
  * SerializedObject
  * @typedef {{
@@ -262,43 +265,44 @@ export class MultiplayerPacket {
         this._packetsToSend.push({
             sender,
             id,
+            retries: 0,
         });
 
-        if (this._packetsToSend.length <= 1) {
-            this.sendNextPacket();
-        }
+        this.sendNextPacket();
     }
 
     static sendNextPacket(packet) {
-        const send = this._packetsSend.findIndex(x => x.id === packet?.arg);
-        if (send >= 0) {
-            clearTimeout(this._packetsSend[send].timer);
-            this._packetsSend.splice(send, 1);
+        if (packet) {
+            const send = this._packetsSend.findIndex(x => x.id === packet.arg);
+            if (send >= 0) {
+                clearTimeout(this._packetsSend[send].timer);
+                this._packetsSend.splice(send, 1);
+            }
         }
 
-        if (this._packetsToSend.length < 1) return;
+        while (this._packetsSend.length < MAX_IN_FLIGHT_PACKETS && this._packetsToSend.length > 0) {
+            const queuedPacket = this._packetsToSend.shift();
+            const { sender, id, retries } = queuedPacket;
+            this._packetsSend.push({
+                id,
+                timer: setTimeout(() => {
+                    const pendingIndex = this._packetsSend.findIndex(packet => packet.id === id);
+                    if (pendingIndex < 0) {
+                        return;
+                    }
+                    this._packetsSend.splice(pendingIndex, 1);
 
-        this._packetsToSend[0].sender();
+                    if (retries < MAX_PACKET_RETRIES) {
+                        this._packetsToSend.unshift({ ...queuedPacket, retries: retries + 1 });
+                    } else {
+                        console.warn("Dropping unacknowledged multiplayer packet", id);
+                    }
 
-        const { sender, id } = this._packetsToSend.shift();
-        this._packetsSend.push({
-            id,
-            timer: setTimeout(() => {
-                this._packetsToSend.push({
-                    sender,
-                    id,
-                });
-
-                if (this._packetsToSend.length <= 1) {
                     this.sendNextPacket();
-                }
-
-                this._packetsSend.splice(
-                    this._packetsSend.findIndex(x => x.id === id),
-                    1
-                );
-            }, 1000),
-        });
+                }, 1000),
+            });
+            sender();
+        }
     }
 
     static handleReceivedPacket(socket, senderId, packet) {

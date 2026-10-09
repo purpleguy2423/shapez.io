@@ -8,6 +8,7 @@
     "private": true,
     "scripts": {
         "dev": "yarn build:mods && cd gulp && NODE_OPTIONS=--openssl-legacy-provider yarn gulp",
+        "dev:with-mods": "node ./scripts/dev-with-mods.js",
         "install:mods": "cd shapez.io-mods && yarn install --frozen-lockfile --ignore-engines && cd gulp && yarn install --ignore-engines --pure-lockfile",
         "build:mods": "if [ ! -x shapez.io-mods/gulp/node_modules/.bin/webpack ]; then yarn install:mods; fi && cd shapez.io-mods && SHAPEZ_MOD_BASE_URL=/ yarn build",
         "devStandalone": "cd gulp && yarn gulp serve.standalone-steam",

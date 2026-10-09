@@ -5,3 +5,12 @@
 [data-icon="building_icons/basic_generator.png"] .icon {
     background-image: url("../res/icons/basic_generator.png") !important;
 }
+
+$toolbarBuildings: basic_consumer, energy_connector, pipe_connector, energy_tunnel, pipe_tunnel, pump,
+    steam_generator, turbine;
+
+@each $building in $toolbarBuildings {
+    [data-icon="building_icons/#{$building}.png"] .icon {
+        background-image: url("../res/icons/#{$building}.svg") !important;
+    }
+}

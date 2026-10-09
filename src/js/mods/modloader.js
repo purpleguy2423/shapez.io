@@ -37,9 +37,13 @@ export class ModLoader {
          * @type {Application}
          */
         this.app = undefined;
+        this.storage = null;
 
         /** @type {Mod[]} */
         this.mods = [];
+
+        /** @type {{ meta: ModMetadata, modClass: typeof Mod, enabled: boolean }[]} */
+        this.modEntries = [];
 
         this.modInterface = new ModInterface(this);
 
@@ -57,6 +61,86 @@ export class ModLoader {
 
     anyModsActive() {
         return this.mods.length > 0;
+    }
+
+    getModEntries() {
+        return this.modEntries;
+    }
+
+    getModEnabledStateMap() {
+        const stateMap = {};
+        this.modEntries.forEach(entry => {
+            stateMap[entry.meta.id] = !!entry.enabled;
+        });
+        return stateMap;
+    }
+
+    async persistModEnabledState() {
+        if (!this.storage) {
+            return;
+        }
+        await this.storage.writeFileAsync("mods_enabled.json", JSON.stringify(this.getModEnabledStateMap()));
+    }
+
+    async loadModEnabledState() {
+        if (!this.storage) {
+            return {};
+        }
+
+        try {
+            const data = await this.storage.readFileAsync("mods_enabled.json");
+            return JSON.parse(data);
+        } catch (ex) {
+            if (ex !== FILE_NOT_FOUND) {
+                console.warn("Failed to load mod enabled state", ex);
+            }
+            return {};
+        }
+    }
+
+    async createModInstance(entry) {
+        const modDataFile = "modsettings_" + entry.meta.id + "__" + entry.meta.version + ".json";
+
+        let settings = entry.meta.settings;
+
+        if (entry.meta.settings) {
+            try {
+                const storedSettings = await this.storage.readFileAsync(modDataFile);
+                settings = JSON.parse(storedSettings);
+            } catch (ex) {
+                if (ex === FILE_NOT_FOUND) {
+                    await this.storage.writeFileAsync(modDataFile, JSON.stringify(entry.meta.settings));
+                } else {
+                    alert("Failed to load settings for " + entry.meta.id + ", will use defaults:\n\n" + ex);
+                }
+            }
+        }
+
+        const mod = new entry.modClass({
+            app: this.app,
+            modLoader: this,
+            meta: entry.meta,
+            settings,
+            saveSettings: () => this.storage.writeFileAsync(modDataFile, JSON.stringify(mod.settings)),
+        });
+        await mod.init();
+        return mod;
+    }
+
+    async toggleModEnabled(id, enabled) {
+        const entry = this.modEntries.find(modEntry => modEntry.meta.id === id);
+        if (!entry) {
+            return;
+        }
+
+        const previousEnabled = entry.enabled;
+        entry.enabled = enabled;
+        try {
+            await this.persistModEnabledState();
+        } catch (ex) {
+            entry.enabled = previousEnabled;
+            throw ex;
+        }
     }
 
     /**
@@ -155,6 +239,7 @@ export class ModLoader {
             ? new StorageImplElectron(this.app)
             : new StorageImplBrowserIndexedDB(this.app);
         await storage.initialize();
+        this.storage = storage;
 
         LOG.log("hook:init", this.app, this.app.storage);
         this.exposeExports();
@@ -169,17 +254,53 @@ export class ModLoader {
                 : [globalConfig.debug.externalModUrl];
 
             for (let i = 0; i < modURLs.length; i++) {
-                const response = await fetch(modURLs[i], {
+                const modURL = modURLs[i];
+                const resolvedURL = (() => {
+                    if (typeof window === "undefined") {
+                        return modURL;
+                    }
+
+                    try {
+                        const parsedURL = new URL(modURL);
+                        const localHostnames = ["localhost", "127.0.0.1", "0.0.0.0"];
+                        if (localHostnames.includes(parsedURL.hostname.toLowerCase())) {
+                            const codespaceHost = window.location.hostname.match(
+                                /^(.*)-\d+(\.app)?\.github\.dev$/i
+                            );
+                            const targetPort = parsedURL.port || "3010";
+                            if (codespaceHost) {
+                                return new URL(
+                                    parsedURL.pathname + parsedURL.search,
+                                    `${window.location.protocol}//${codespaceHost[1]}-${targetPort}${
+                                        codespaceHost[2] || ""
+                                    }.github.dev`
+                                ).toString();
+                            }
+
+                            return new URL(
+                                parsedURL.pathname + parsedURL.search,
+                                `${window.location.protocol}//${window.location.hostname}:${targetPort}`
+                            ).toString();
+                        }
+                    } catch (ex) {
+                        console.warn("Could not resolve external mod URL", modURL, ex);
+                    }
+                    return modURL;
+                })();
+
+                const response = await fetch(resolvedURL, {
                     method: "GET",
                 });
                 if (response.status !== 200) {
                     throw new Error(
-                        "Failed to load " + modURLs[i] + ": " + response.status + " " + response.statusText
+                        "Failed to load " + resolvedURL + ": " + response.status + " " + response.statusText
                     );
                 }
                 mods.push(await response.text());
             }
         }
+
+        const modStateMap = await this.loadModEnabledState();
 
         window.$shapez_registerMod = (modClass, meta) => {
             if (this.initialized) {
@@ -217,7 +338,6 @@ export class ModLoader {
 
         for (let i = 0; i < this.modLoadQueue.length; i++) {
             const { modClass, meta } = this.modLoadQueue[i];
-            const modDataFile = "modsettings_" + meta.id + "__" + meta.version + ".json";
 
             if (meta.minimumGameVersion) {
                 const minimumGameVersion = meta.minimumGameVersion;
@@ -239,31 +359,19 @@ export class ModLoader {
                 }
             }
 
-            let settings = meta.settings;
+            const entry = {
+                meta,
+                modClass,
+                enabled: modStateMap[meta.id] !== false,
+            };
+            this.modEntries.push(entry);
 
-            if (meta.settings) {
-                try {
-                    const storedSettings = await storage.readFileAsync(modDataFile);
-                    settings = JSON.parse(storedSettings);
-                } catch (ex) {
-                    if (ex === FILE_NOT_FOUND) {
-                        // Write default data
-                        await storage.writeFileAsync(modDataFile, JSON.stringify(meta.settings));
-                    } else {
-                        alert("Failed to load settings for " + meta.id + ", will use defaults:\n\n" + ex);
-                    }
-                }
+            if (!entry.enabled) {
+                continue;
             }
 
             try {
-                const mod = new modClass({
-                    app: this.app,
-                    modLoader: this,
-                    meta,
-                    settings,
-                    saveSettings: () => storage.writeFileAsync(modDataFile, JSON.stringify(mod.settings)),
-                });
-                await mod.init();
+                const mod = await this.createModInstance(entry);
                 this.mods.push(mod);
             } catch (ex) {
                 console.error(ex);

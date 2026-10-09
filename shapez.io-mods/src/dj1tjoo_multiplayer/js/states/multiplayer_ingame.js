@@ -8,6 +8,9 @@ import { ModInterface } from "shapez/mods/mod_interface";
 import { GameCreationPayload, InGameState } from "shapez/states/ingame";
 import { HUDSettingsMenu } from "shapez/game/hud/parts/settings_menu";
 import { HUDModalDialogs } from "shapez/game/hud/parts/modal_dialogs";
+import { HUDStandaloneAdvantages } from "shapez/game/hud/parts/standalone_advantages";
+import { HUDUnlockNotification } from "shapez/game/hud/parts/unlock_notification";
+import { HUDPartTutorialHints as HUDTutorialHints } from "shapez/game/hud/parts/tutorial_hints";
 import { io } from "socket.io-client";
 import { T } from "shapez/translations";
 import {
@@ -221,8 +224,8 @@ export function createMultiplayerGameState(modInterface) {
                                             this.creationPayload.connection.socket.connectionId,
                                             {
                                                 socket,
-                                                connectionId:
-                                                    this.creationPayload.connection.socket.connectionId,
+                                                connectionId: this.creationPayload.connection.socket
+                                                    .connectionId,
                                                 id: socketId,
                                                 hostSocketId,
                                             },
@@ -364,6 +367,27 @@ export function createMultiplayerGameState(modInterface) {
             }
         }
     );
+
+    [HUDStandaloneAdvantages, HUDUnlockNotification, HUDTutorialHints].forEach(hudClass => {
+        modInterface.replaceMethod(
+            hudClass,
+            "shouldPauseGame",
+            /** @this {import("shapez/game/hud/base_hud_part").BaseHUDPart} */
+            function () {
+                if (/** @type {InMultiplayerGameState} */ (this.root.gameState).isMultiplayer()) {
+                    return false;
+                }
+
+                if (this instanceof HUDStandaloneAdvantages) {
+                    return this.visible;
+                }
+                if (this instanceof HUDUnlockNotification) {
+                    return !G_IS_STANDALONE && this.visible;
+                }
+                return this.enlarged;
+            }
+        );
+    });
 
     modInterface.replaceMethod(
         HUDSettingsMenu,

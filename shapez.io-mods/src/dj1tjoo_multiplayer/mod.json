@@ -15,5 +15,5 @@
         "prefix": "/"
     },
     "_todo": ["fix buttons"],
-    "disabled": true
+    "disabled": false
 }

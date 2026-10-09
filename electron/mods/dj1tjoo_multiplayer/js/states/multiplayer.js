@@ -299,14 +299,13 @@ export class MultiplayerState extends GameState {
             validator: val => val.trim().length > 0,
         });
 
-        //UUID v4 regex
-        const uuid = /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i;
+        const roomCode = /^[A-HJ-NP-Z2-9]{6,10}$/i;
         const connectIdInput = new FormElementInput({
             id: "connectIdInput",
             label: T.multiplayer.joinMultiplayer.id,
             placeholder: "",
             defaultValue: "",
-            validator: val => val.match(uuid) && val.trim().length > 0,
+            validator: val => roomCode.test(val.trim()),
         });
 
         const dialog = new DialogWithForm({

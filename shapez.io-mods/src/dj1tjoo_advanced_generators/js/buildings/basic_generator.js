@@ -93,9 +93,6 @@ export class MetaBasicGeneratorBuilding extends ModMetaBuilding {
     updateVariants(entity, rotationVariant, variant) {
         const localConfig = config().basic_generator[variant];
 
-        entity.addComponent(getComponentShared("EnergyPinRenderer"));
-        entity.addComponent(getComponentShared("PipePinRenderer"));
-
         entity.components["EnergyPin"].setSlots([
             {
                 direction: enumDirection.left,
@@ -139,6 +136,9 @@ export class MetaBasicGeneratorBuilding extends ModMetaBuilding {
      * @param {import("shapez/game/root").GameRoot} root
      */
     setupEntityComponents(entity, root) {
+        entity.addComponent(getComponentShared("EnergyPinRenderer"));
+        entity.addComponent(getComponentShared("PipePinRenderer"));
+
         entity.addComponent(
             new ItemAcceptorComponent({
                 slots: [],

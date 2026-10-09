@@ -1,5 +1,11 @@
 const secure = false;
 let server;
+const handleRequest = (req, res) => {
+    if (req.url === "/" || req.url === "/health") {
+        res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
+        res.end("Multiplayer signaling server is running");
+    }
+};
 
 if (secure) {
     const https = require("https");
@@ -10,10 +16,10 @@ if (secure) {
         cert: fs.readFileSync("cert.pem"),
     };
 
-    server = https.createServer(options, (req, res) => {});
+    server = https.createServer(options, handleRequest);
 } else {
     const http = require("http");
-    server = http.createServer((req, res) => {});
+    server = http.createServer(handleRequest);
 }
 
 const io = require("socket.io")(server, {

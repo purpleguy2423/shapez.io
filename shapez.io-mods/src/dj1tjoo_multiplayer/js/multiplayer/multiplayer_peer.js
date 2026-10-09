@@ -26,6 +26,22 @@ import { StaticMapEntityComponent } from "shapez/game/components/static_map_enti
 import { getMod } from "../getMod";
 import { enumColors, enumColorToShortcode } from "shapez/game/colors";
 
+const ROOM_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+function generateRoomCode(length = 8) {
+    if (typeof crypto !== "undefined" && crypto.getRandomValues) {
+        const values = new Uint32Array(length);
+        crypto.getRandomValues(values);
+        return Array.from(values, value => ROOM_CODE_ALPHABET[value % ROOM_CODE_ALPHABET.length]).join("");
+    }
+
+    let code = "";
+    for (let i = 0; i < length; ++i) {
+        code += ROOM_CODE_ALPHABET[Math.floor(Math.random() * ROOM_CODE_ALPHABET.length)];
+    }
+    return code;
+}
+
 /**
  * @typedef {{
  * socket: Socket,
@@ -77,7 +93,7 @@ export class MultiplayerPeer {
     }
 
     setupHost() {
-        const connectionId = v4();
+        const connectionId = generateRoomCode();
 
         const socket = io(this.ingameState.creationPayload.host, { transports: ["websocket"] });
         let socketId = undefined;
@@ -196,7 +212,7 @@ export class MultiplayerPeer {
                     stats: this.ingameState.savegame.getStatistics(),
                     lastUpdate: this.ingameState.savegame.getRealLastUpdate(),
                 },
-                600
+                6000
             );
 
             MultiplayerPacket.sendPacket(this.socket, receiverId, new FlagPacket(FlagPacketFlags.STARTDATA));
@@ -326,8 +342,7 @@ export class MultiplayerPeer {
         }
 
         this.user.currentVariant = this.ingameState.core.root.hud.parts.buildingPlacer.currentVariant.get();
-        this.user.currentBaseRotation =
-            this.ingameState.core.root.hud.parts.buildingPlacer.currentBaseRotation;
+        this.user.currentBaseRotation = this.ingameState.core.root.hud.parts.buildingPlacer.currentBaseRotation;
 
         const mousePosition = this.ingameState.core.root.app.mousePosition;
         if (!mousePosition) {
@@ -372,7 +387,7 @@ export class MultiplayerPeer {
                 this.builder.freeEntityAreaBeforeBuild(entity, true);
             }
 
-            if (originalRotation && rotation && buildingData) {
+            if (originalRotation !== undefined && rotation !== undefined && buildingData) {
                 this.builder.tryPlaceCurrentBuildingAt(origin, {
                     origin: origin,
                     originalRotation: originalRotation,
